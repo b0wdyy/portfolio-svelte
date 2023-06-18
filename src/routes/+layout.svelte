@@ -1,11 +1,9 @@
 <script lang="ts">
 	import '../app.css';
-	import DarkModeToggle from '$lib/components/ui/DarkModeToggle.svelte';
+	import Nav from '$lib/components/ui/common/Nav.svelte';
+	import Footer from '$lib/components/ui/common/Footer.svelte';
 </script>
 
-<nav class="flex items-center justify-between px-20 py-10">
-	<h2 class="font-bold tracking-widest">BOWDY.</h2>
-
-	<DarkModeToggle />
-</nav>
+<Nav />
 <slot />
+<Footer />

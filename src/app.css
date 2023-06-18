@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-    @apply bg-primary-light dark:bg-primary-dark transition-colors;
+    @apply bg-primary-light dark:bg-primary-dark transition-colors scroll-smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {

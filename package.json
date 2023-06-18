@@ -36,6 +36,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"contentful": "^10.2.4",
 		"gsap": "^3.12.1"
 	}
 }
