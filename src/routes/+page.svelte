@@ -2,8 +2,9 @@
 	import { gsap } from 'gsap';
 	import { onMount } from 'svelte';
 	import AboutCard from '$lib/components/ui/AboutCard.svelte';
-	import dots from '$lib/assets/dots.svg';
 	import Chip from '$lib/components/ui/Chip.svelte';
+
+	// TODO: fetch 3 first blog posts
 
 	let pageLoaderContent: HTMLDivElement;
 	let pageLoaderContentAfter: HTMLDivElement;
@@ -54,15 +55,15 @@
 </svelte:head>
 <div
 	bind:this={pageLoaderContent}
-	class="fixed inset-0 z-30 grid place-items-center overflow-hidden bg-slate-200"
+	class="fixed inset-0 z-30 grid place-items-center overflow-hidden bg-slate-200 dark:bg-slate-900"
 >
 	<div class="overflow-hidden">
-		<p bind:this={loaderText} class="py-2 text-2xl !text-primary-dark">LOADING</p>
+		<p bind:this={loaderText} class="py-2 text-2xl">LOADING</p>
 	</div>
 </div>
 <div
 	bind:this={pageLoaderContentAfter}
-	class="fixed inset-0 z-20 grid place-items-center overflow-hidden bg-slate-100"
+	class="fixed inset-0 z-20 grid place-items-center overflow-hidden bg-slate-100 dark:bg-slate-800"
 />
 
 <main class="relative">
@@ -89,7 +90,7 @@
 	</svg>
 
 	<svg
-		class="absolute right-40 top-80 w-80"
+		class="absolute right-40 top-96 w-80"
 		width="128"
 		height="128"
 		viewBox="0 0 128 128"

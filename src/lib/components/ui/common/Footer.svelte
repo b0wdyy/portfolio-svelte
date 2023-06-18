@@ -7,22 +7,18 @@
 </script>
 
 <footer
-	class="mt-8 flex items-center justify-center p-16 text-primary-dark dark:text-primary-light"
+	class="container mx-auto mt-8 flex items-center justify-center py-16 text-primary-dark dark:text-primary-light"
 >
-	<div class="flex items-center gap-8">
+	<div class="grid w-full grid-cols-3 items-center">
 		<span>
 			&copy; {year}
 		</span>
 
-		&middot;
-
-		<span>
+		<span class="text-center">
 			Made with <span class="text-red-500">&hearts;</span> by Bowdy
 		</span>
 
-		&middot;
-
-		<div class="flex items-center gap-4">
+		<div class="flex items-center justify-end gap-4">
 			<a
 				target="_blank"
 				rel="noreferrer noopener"
