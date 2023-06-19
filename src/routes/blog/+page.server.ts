@@ -1,4 +1,4 @@
-import contentfulClient from '$lib/server/contentful';
+import { contentfulClient } from '$lib/server/contentful';
 import type { BlogPostSkeleton } from '$lib/types/contentful.interface';
 import type { PageServerLoad } from './$types';
 
