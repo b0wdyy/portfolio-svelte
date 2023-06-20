@@ -12,6 +12,8 @@
 	let tl = gsap.timeline();
 
 	onMount(() => {
+		document.body.style.overflow = 'hidden';
+
 		tl.fromTo(
 			loaderText,
 			{
@@ -26,12 +28,12 @@
 			.to(loaderText, {
 				y: '-100%',
 				duration: 0.75,
-				ease: 'expo.in'
+				ease: 'power3.inOut'
 			})
 			.to(pageLoaderContent, {
 				height: 0,
 				duration: 1.5,
-				ease: 'expo.in',
+				ease: 'power4.in',
 				onComplete: () => pageLoaderContent?.remove()
 			})
 			.to(
@@ -40,7 +42,10 @@
 					height: 0,
 					duration: 1.25,
 					ease: 'expo.in',
-					onComplete: () => pageLoaderContentAfter?.remove()
+					onComplete: () => {
+						pageLoaderContentAfter?.remove();
+						document.body.style.overflow = 'auto';
+					}
 				},
 				'-=1.1'
 			);
@@ -140,8 +145,8 @@
 		</defs>
 	</svg>
 
-	<section class="mx-auto my-32 max-w-2xl text-center">
-		<p class="mb-8 text-4xl leading-relaxed">
+	<section class="mx-auto mb-32 mt-20 max-w-2xl text-center">
+		<p class="mb-12 text-4xl leading-relaxed">
 			Welcome to my portfolio, where imagination meets functionality and dreams transform into
 			digital reality.
 		</p>
@@ -155,9 +160,9 @@
 	</section>
 
 	<section class="container mx-auto px-8 lg:px-0">
-		<h2 class="mb-8 text-6xl font-bold">About me</h2>
+		<h2 class="mb-12 text-6xl font-bold">About me</h2>
 
-		<div class="grid gap-24 lg:grid-cols-3">
+		<div class="grid gap-8 lg:grid-cols-3 lg:gap-24">
 			<AboutCard
 				title="Passionate Problem-Solver"
 				content="As a software engineer, I'm fueled by a relentless drive to solve complex problems. With
@@ -181,13 +186,13 @@
 	</section>
 
 	<section class="container mx-auto mt-16 px-8 lg:px-0">
-		<h2 class="mb-8 text-6xl font-bold">Skills</h2>
+		<h2 class="mb-12 text-6xl font-bold">Skills</h2>
 
-		<div class="grid gap-24 lg:grid-cols-3">
+		<div class="grid gap-8 lg:grid-cols-3 lg:gap-24">
 			<div class="mb-8">
 				<h3 class="mb-4 text-2xl font-bold">Frontend Development</h3>
 
-				<div class="flex flex-wrap items-center gap-8">
+				<div class="flex flex-wrap items-center gap-4">
 					<Chip>HTML5</Chip>
 					<Chip>CSS3</Chip>
 					<Chip>TypeScript</Chip>
@@ -206,7 +211,7 @@
 					<h3 class="mb-4 text-2xl font-bold">Backend Development</h3>
 				</div>
 
-				<div class="flex flex-wrap items-center gap-8">
+				<div class="flex flex-wrap items-center gap-4">
 					<Chip>Express.js (Node.js, Nest.js)</Chip>
 					<Chip>Java (Spring Boot)</Chip>
 					<Chip>PHP (Laravel)</Chip>
@@ -225,7 +230,7 @@
 					<h3 class="mb-4 text-2xl font-bold">Additional Skills</h3>
 				</div>
 
-				<div class="flex flex-wrap items-center gap-8">
+				<div class="flex flex-wrap items-center gap-4">
 					<Chip>Monorepo (Nx, Turborepo)</Chip>
 					<Chip>Docker</Chip>
 					<Chip>Testing (JUnit, Pest, Jest)</Chip>

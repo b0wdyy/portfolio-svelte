@@ -24,7 +24,7 @@
 				ease: 'power2.inOut'
 			}).to('.nav-items > a', {
 				opacity: 1,
-				transform: 'translateY(0)',
+				y: 0,
 				duration: 0.5,
 				ease: 'power3.inOut',
 				stagger: {
@@ -57,6 +57,15 @@
 	<div class="nav-items flex flex-col gap-20">
 		<a
 			on:click={reverseTimeline}
+			class="relative -translate-x-8 -translate-y-full text-6xl font-bold text-primary-dark opacity-0 dark:text-primary-light"
+			href="/"
+		>
+			<span class="absolute -translate-x-24 text-8xl opacity-20">00.</span>
+			Home
+		</a>
+
+		<a
+			on:click={reverseTimeline}
 			class="relative -translate-y-full text-6xl font-bold text-primary-dark opacity-0 dark:text-primary-light"
 			href="/blog"
 		>
@@ -66,7 +75,7 @@
 
 		<a
 			on:click={reverseTimeline}
-			class="relative -translate-y-full text-6xl font-bold text-primary-dark opacity-0 dark:text-primary-light"
+			class="relative -translate-y-full translate-x-8 text-6xl font-bold text-primary-dark opacity-0 dark:text-primary-light"
 			href="/contact"
 		>
 			<span class="absolute -translate-x-24 text-8xl opacity-20">02.</span>

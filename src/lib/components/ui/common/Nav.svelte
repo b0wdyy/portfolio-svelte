@@ -3,7 +3,7 @@
 	import Hamburger from './Hamburger.svelte';
 </script>
 
-<nav class="container mx-auto flex items-center justify-between py-10">
+<nav class="container mx-auto flex items-center justify-between px-8 py-10 lg:px-0">
 	<h2 class="font-bold tracking-widest">
 		<a href="/">BOWDY.</a>
 	</h2>
