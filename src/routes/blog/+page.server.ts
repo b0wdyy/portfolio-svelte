@@ -7,11 +7,13 @@ export const load = (async () => {
 		content_type: 'blogPost'
 	});
 
+	console.log(items);
 	return {
 		posts: items.map((item) => ({
 			title: item.fields.title,
 			slug: item.fields.slug,
-			content: item.fields.content
+			content: item.fields.content,
+			featuredImage: item.fields.featuredImage as any
 		}))
 	};
 }) satisfies PageServerLoad;

@@ -7,6 +7,7 @@
 	/>
 	<meta name="author" content="Bodhi Vandael" />
 </svelte:head>
+
 <main class="container mx-auto px-8 lg:px-0">
 	<h1 class="mt-8 max-w-3xl text-5xl font-bold">
 		Would love to hear your ideas, let's grab a coffee!

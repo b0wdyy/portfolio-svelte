@@ -1,6 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import * as contentful from 'contentful';
+import type contentful from 'contentful';
 
 export interface BlogPostSkeleton {
 	contentTypeId: 'blogPost';
@@ -8,5 +6,6 @@ export interface BlogPostSkeleton {
 		title: contentful.EntryFields.Text;
 		slug: contentful.EntryFields.Text;
 		content: contentful.EntryFields.RichText;
+		featuredImage: contentful.EntryFields.Object;
 	};
 }
