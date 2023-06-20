@@ -15,10 +15,10 @@
 		tl.fromTo(
 			loaderText,
 			{
-				letterSpacing: '40px'
+				letterSpacing: '20px'
 			},
 			{
-				letterSpacing: '80px',
+				letterSpacing: '40px',
 				duration: 0.75,
 				ease: 'expo.out'
 			}
@@ -53,12 +53,13 @@
 	<meta name="keywords" content="portfolio, software, engineer, bodhi, vandael" />
 	<meta name="author" content="Bodhi Vandael" />
 </svelte:head>
+
 <div
 	bind:this={pageLoaderContent}
 	class="fixed inset-0 z-30 grid place-items-center overflow-hidden bg-slate-200 dark:bg-slate-900"
 >
 	<div class="overflow-hidden">
-		<p bind:this={loaderText} class="py-2 text-2xl">LOADING</p>
+		<p bind:this={loaderText} class="py-2 text-lg lg:text-2xl">LOADING</p>
 	</div>
 </div>
 <div
@@ -153,10 +154,10 @@
 		</a>
 	</section>
 
-	<section class="container mx-auto">
+	<section class="container mx-auto px-8 lg:px-0">
 		<h2 class="mb-8 text-6xl font-bold">About me</h2>
 
-		<div class="grid grid-cols-3 gap-24">
+		<div class="grid gap-24 lg:grid-cols-3">
 			<AboutCard
 				title="Passionate Problem-Solver"
 				content="As a software engineer, I'm fueled by a relentless drive to solve complex problems. With
@@ -179,10 +180,10 @@
 		</div>
 	</section>
 
-	<section class="container mx-auto mt-16">
+	<section class="container mx-auto mt-16 px-8 lg:px-0">
 		<h2 class="mb-8 text-6xl font-bold">Skills</h2>
 
-		<div class="grid grid-cols-3 gap-24">
+		<div class="grid gap-24 lg:grid-cols-3">
 			<div class="mb-8">
 				<h3 class="mb-4 text-2xl font-bold">Frontend Development</h3>
 
