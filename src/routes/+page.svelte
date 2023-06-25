@@ -115,6 +115,35 @@
 					stagger: 0.25
 				},
 				'-=1.25'
+			)
+			.fromTo(
+				'.skills__section h2',
+				{
+					opacity: 0,
+					y: '-100%'
+				},
+				{
+					y: '0%',
+					opacity: 1,
+					duration: 1.5,
+					ease: 'expo.out'
+				},
+				'-=1'
+			)
+			.fromTo(
+				'.skills__item',
+				{
+					opacity: 0,
+					y: 20
+				},
+				{
+					y: 0,
+					opacity: 1,
+					duration: 1.5,
+					ease: 'expo.out',
+					stagger: 0.25
+				},
+				'-=1'
 			);
 	});
 </script>
@@ -252,11 +281,11 @@
 		</div>
 	</section>
 
-	<section class="container mx-auto mt-16 px-8 lg:px-0">
+	<section class="skills__section container mx-auto mb-8 mt-16 px-8 lg:px-0">
 		<h2 class="mb-12 text-6xl font-bold">Skills</h2>
 
 		<div class="grid gap-8 lg:grid-cols-3">
-			<div class="mb-8">
+			<div class="skills__item">
 				<h3 class="mb-4 text-2xl font-bold">Frontend Development</h3>
 
 				<div class="flex flex-wrap items-center gap-4">
@@ -273,10 +302,8 @@
 				</div>
 			</div>
 
-			<div>
-				<div>
-					<h3 class="mb-4 text-2xl font-bold">Backend Development</h3>
-				</div>
+			<div class="skills__item">
+				<h3 class="mb-4 text-2xl font-bold">Backend Development</h3>
 
 				<div class="flex flex-wrap items-center gap-4">
 					<Chip>Express.js (Node.js, Nest.js)</Chip>
@@ -292,10 +319,8 @@
 				</div>
 			</div>
 
-			<div>
-				<div>
-					<h3 class="mb-4 text-2xl font-bold">Additional Skills</h3>
-				</div>
+			<div class="skills__item">
+				<h3 class="mb-4 text-2xl font-bold">Additional Skills</h3>
 
 				<div class="flex flex-wrap items-center gap-4">
 					<Chip>Monorepo (Nx, Turborepo)</Chip>
