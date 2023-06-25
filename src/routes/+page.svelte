@@ -48,6 +48,73 @@
 					}
 				},
 				'-=1.1'
+			)
+			.fromTo(
+				'nav',
+				{
+					opacity: 0
+				},
+				{
+					opacity: 1,
+					duration: 1.25,
+					ease: 'expo.inOut'
+				}
+			)
+			.fromTo(
+				'.hero h1',
+				{
+					opacity: 0,
+					y: '-80px'
+				},
+				{
+					y: '0%',
+					opacity: 1,
+					duration: 1.5,
+					ease: 'expo.out'
+				},
+				'-=0.75'
+			)
+			.fromTo(
+				'.hero a',
+				{
+					opacity: 0,
+					y: '100%'
+				},
+				{
+					y: '0%',
+					opacity: 1,
+					duration: 1.5,
+					ease: 'expo.out'
+				}
+			)
+			.fromTo(
+				'.about__section h2',
+				{
+					opacity: 0,
+					y: '-100%'
+				},
+				{
+					y: '0%',
+					opacity: 1,
+					duration: 1.5,
+					ease: 'expo.out'
+				},
+				'-=1.25'
+			)
+			.fromTo(
+				'.about__card',
+				{
+					opacity: 0,
+					y: '100%'
+				},
+				{
+					y: '0%',
+					opacity: 1,
+					duration: 1.5,
+					ease: 'expo.out',
+					stagger: 0.25
+				},
+				'-=1.25'
 			);
 	});
 </script>
@@ -145,11 +212,11 @@
 		</defs>
 	</svg>
 
-	<section class="mx-auto mb-32 mt-20 max-w-2xl text-center">
-		<p class="mb-12 text-4xl leading-relaxed">
+	<section class="hero mx-auto mb-32 mt-20 max-w-2xl text-center">
+		<h1 class="mb-12 text-4xl leading-relaxed">
 			Welcome to my portfolio, where imagination meets functionality and dreams transform into
 			digital reality.
-		</p>
+		</h1>
 
 		<a
 			href="contact"
@@ -159,10 +226,10 @@
 		</a>
 	</section>
 
-	<section class="container mx-auto px-8 lg:px-0">
+	<section class="about__section container mx-auto px-8 lg:px-0">
 		<h2 class="mb-12 text-6xl font-bold">About me</h2>
 
-		<div class="grid gap-8 lg:grid-cols-3 lg:gap-24">
+		<div class="grid gap-8 lg:grid-cols-3">
 			<AboutCard
 				title="Passionate Problem-Solver"
 				content="As a software engineer, I'm fueled by a relentless drive to solve complex problems. With
@@ -188,7 +255,7 @@
 	<section class="container mx-auto mt-16 px-8 lg:px-0">
 		<h2 class="mb-12 text-6xl font-bold">Skills</h2>
 
-		<div class="grid gap-8 lg:grid-cols-3 lg:gap-24">
+		<div class="grid gap-8 lg:grid-cols-3">
 			<div class="mb-8">
 				<h3 class="mb-4 text-2xl font-bold">Frontend Development</h3>
 
